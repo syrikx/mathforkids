@@ -1,18 +1,16 @@
 package com.example.mathforkids
 
 import android.content.Context
+import android.media.MediaPlayer
+import android.os.Handler
+import android.os.Looper
+import android.os.SystemClock
 import android.util.Log
 import android.view.View
-import android.view.animation.AnimationUtils
-import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.navigation.Navigation
-import kotlinx.coroutines.delay
+
 
 data class Problem(val num1: Int, val num2: Int, val operator: String)
 
@@ -32,6 +30,10 @@ class SharedViewModel : ViewModel() {
     val num2: LiveData<Int> get() = _num2
     private val _answer = MutableLiveData<Int>()
     val answer: LiveData<Int> get() = _answer
+    private val _correctAnswerEvent = MutableLiveData<Unit>()
+    val correctAnswerEvent : LiveData<Unit> get() = _correctAnswerEvent
+    private val _incorrectAnswerEvent = MutableLiveData<Unit>()
+    val incorrectAnswerEvent : LiveData<Unit> get() = _incorrectAnswerEvent
 
     val sampleText : String = "this is sampleText"
     val sampleColor : Int = R.color.color0
@@ -126,11 +128,19 @@ class SharedViewModel : ViewModel() {
 
     fun handleCorrectAnswer(answer : String){
         _noCorrectAnswers.value = _noCorrectAnswers.value?.plus(1)
-        resetProblem()
+        _correctAnswerEvent.value = Unit
+        Handler(Looper.getMainLooper()).postDelayed({
+            resetProblem()
+        }, 1000L)
+        resetAnswer()
     }
 
     fun handleIncorrectAnswer(answer : String, input : String){
-
+        _incorrectAnswerEvent.value = Unit
+        Handler(Looper.getMainLooper()).postDelayed({
+            resetProblem()
+        }, 2000L)
+        resetAnswer()
     }
 
 

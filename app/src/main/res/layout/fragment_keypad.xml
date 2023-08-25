@@ -34,7 +34,7 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:columnCount="3">
 
             <!-- Number Buttons -->
@@ -44,6 +44,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="1"
                 android:onClick="@{() -> viewModel.appendNumber(1)}" />
             <Button
@@ -52,6 +53,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="2"
                 android:onClick="@{() -> viewModel.appendNumber(2)}" />
             <Button
@@ -60,6 +62,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="3"
                 android:onClick="@{() -> viewModel.appendNumber(3)}" />
             <Button
@@ -68,6 +71,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="4"
                 android:onClick="@{() -> viewModel.appendNumber(4)}" />
             <Button
@@ -76,6 +80,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="5"
                 android:onClick="@{() -> viewModel.appendNumber(5)}" />
             <Button
@@ -84,6 +89,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="6"
                 android:onClick="@{() -> viewModel.appendNumber(6)}" />
             <Button
@@ -92,6 +98,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="7"
                 android:onClick="@{() -> viewModel.appendNumber(7)}" />
             <Button
@@ -100,6 +107,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="8"
                 android:onClick="@{() -> viewModel.appendNumber(8)}" />
             <Button
@@ -108,6 +116,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="9"
                 android:onClick="@{() -> viewModel.appendNumber(9)}" />
             <Button
@@ -116,6 +125,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="0"
                 android:onClick="@{() -> viewModel.appendNumber(0)}" />
 
@@ -125,6 +135,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="Delete"
                 android:onClick="@{()->viewModel.resetAnswer()}" />
 
@@ -134,6 +145,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:textSize="@dimen/keypad_size"
                 android:text="Enter"
                 android:onClick="@{()->viewModel.submitAnswer()}" />
 

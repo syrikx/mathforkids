@@ -1,5 +1,6 @@
 package com.example.mathforkids.main.problemsolving
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,6 +19,8 @@ import com.example.mathforkids.databinding.FragmentQuestionBinding
 class QuestionFragment : Fragment() {
 
     private var _binding: FragmentQuestionBinding? = null
+    private lateinit var dingdong: MediaPlayer
+    private lateinit var ddeng: MediaPlayer
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -34,10 +37,19 @@ class QuestionFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         viewModel.resetProblem()
         binding.viewModel = viewModel
-        viewModel.isAnswerVisible.observe(viewLifecycleOwner, Observer { value ->
-            binding.cardAnswer.visibility = value
-        })
+        binding.lifecycleOwner = viewLifecycleOwner
+//        viewModel.isAnswerVisible.observe(viewLifecycleOwner, Observer { value ->
+//            binding.cardAnswer.visibility = value
+//        })
 //        binding.lifecycleOwner = viewLifecycleOwner
+        dingdong = MediaPlayer.create(context, R.raw.dingdong)
+        ddeng = MediaPlayer.create(context, R.raw.ddeng)
+        viewModel.correctAnswerEvent.observe(viewLifecycleOwner) {
+            dingdong.start()
+        }
+        viewModel.incorrectAnswerEvent.observe(viewLifecycleOwner) {
+            ddeng.start()
+        }
         return binding.root
 
     }

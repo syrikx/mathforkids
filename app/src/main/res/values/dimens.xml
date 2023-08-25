@@ -1,6 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_size">50sp</dimen>
+    <dimen name="keypad_size">20sp</dimen>
     <dimen name="card_size">80sp</dimen>
     <dimen name="card_margin_end">10sp</dimen>
 </resources>

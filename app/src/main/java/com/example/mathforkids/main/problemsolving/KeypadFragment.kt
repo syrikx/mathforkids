@@ -34,7 +34,7 @@ class KeypadFragment : Fragment() {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_keypad,container,false)
         viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         binding.viewModel = viewModel
-//        binding.lifecycleOwner = viewLifecycleOwner
+        binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
 
     }
@@ -43,9 +43,9 @@ class KeypadFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // inputValue LiveData를 관찰합니다.
-        viewModel.inputValue.observe(viewLifecycleOwner, Observer { value ->
-            binding.textView.text = value.toString()  // 'binding.textView'는 당신의 TextView의 실제 바인딩 이름이 아닐 수 있습니다.
-        })
+//        viewModel.inputValue.observe(viewLifecycleOwner, Observer { value ->
+//            binding.textView.text = value.toString()  // 'binding.textView'는 당신의 TextView의 실제 바인딩 이름이 아닐 수 있습니다.
+//        })
     }
 
 

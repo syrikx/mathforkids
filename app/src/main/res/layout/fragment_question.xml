@@ -24,7 +24,6 @@
             android:id="@+id/cardNum1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="@dimen/card_margin_end"
             app:cardCornerRadius="8dp"
             app:cardBackgroundColor="@color/color0">
@@ -46,7 +45,6 @@
             android:id="@+id/cardOperator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="@dimen/card_margin_end"
             app:cardCornerRadius="8dp"
             app:cardBackgroundColor="@color/color8">
@@ -66,7 +64,6 @@
             android:id="@+id/cardNum2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="@dimen/card_margin_end"
             app:cardCornerRadius="8dp"
             app:cardBackgroundColor="@color/color0">
@@ -86,7 +83,6 @@
             android:id="@+id/cardEqual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             app:cardCornerRadius="8dp"
             app:cardBackgroundColor="@color/color8">
 

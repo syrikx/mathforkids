@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/problemSolvingFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/problemSolvingFragment"
         android:name="com.example.mathforkids.main.ProblemSolvingFragment"
-        android:label="fragment_problem_solving"
+        android:label="문제를 풀어볼까요"
         tools:layout="@layout/fragment_problem_solving" >
         <action
             android:id="@+id/action_problemSolvingFragment_to_settlementFragment"
