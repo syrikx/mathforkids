@@ -1,0 +1,133 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mathforkids.SharedViewModel" />
+    </data>
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:spacing="8dp">
+
+        <!-- Num1 Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNum1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/color0">
+
+            <TextView
+                android:text="@{Integer.toString(viewModel.num1)}"
+                android:layout_width="@dimen/card_size"
+                android:layout_height="@dimen/card_size"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/cardText"
+                android:gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!-- Operator Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardOperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/color8">
+
+            <TextView
+                android:text="@{viewModel.operator}"
+                android:layout_width="@dimen/card_size"
+                android:layout_height="@dimen/card_size"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/cardText"
+                android:gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Num2 Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/color0">
+
+            <TextView
+                android:text="@{Integer.toString(viewModel.num2)}"
+                android:layout_width="@dimen/card_size"
+                android:layout_height="@dimen/card_size"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/cardText"
+                android:gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- = Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardEqual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/color8">
+
+            <TextView
+                android:text="="
+                android:layout_width="@dimen/card_size"
+                android:layout_height="@dimen/card_size"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/cardText"
+                android:gravity="center"
+                />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <!-- Answer Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.isAnswerVisible}"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/color7">
+
+            <TextView
+                android:id="@+id/textAnswer"
+                android:text="@{Integer.toString(viewModel.answer)}"
+                android:layout_width="@dimen/card_size"
+                android:layout_height="@dimen/card_size"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/cardText"
+                android:gravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </LinearLayout>
+</layout>

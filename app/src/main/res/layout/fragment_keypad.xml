@@ -1,0 +1,142 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mathforkids.SharedViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- New TextView to display inputValue -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@{viewModel.inputValue}"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="4dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:columnCount="3">
+
+            <!-- Number Buttons -->
+            <Button
+                android:id="@+id/num1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="1"
+                android:onClick="@{() -> viewModel.appendNumber(1)}" />
+            <Button
+                android:id="@+id/num2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="2"
+                android:onClick="@{() -> viewModel.appendNumber(2)}" />
+            <Button
+                android:id="@+id/num3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="3"
+                android:onClick="@{() -> viewModel.appendNumber(3)}" />
+            <Button
+                android:id="@+id/num4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="4"
+                android:onClick="@{() -> viewModel.appendNumber(4)}" />
+            <Button
+                android:id="@+id/num5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="5"
+                android:onClick="@{() -> viewModel.appendNumber(5)}" />
+            <Button
+                android:id="@+id/num6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="6"
+                android:onClick="@{() -> viewModel.appendNumber(6)}" />
+            <Button
+                android:id="@+id/num7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="7"
+                android:onClick="@{() -> viewModel.appendNumber(7)}" />
+            <Button
+                android:id="@+id/num8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="8"
+                android:onClick="@{() -> viewModel.appendNumber(8)}" />
+            <Button
+                android:id="@+id/num9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="9"
+                android:onClick="@{() -> viewModel.appendNumber(9)}" />
+            <Button
+                android:id="@+id/num0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="0"
+                android:onClick="@{() -> viewModel.appendNumber(0)}" />
+
+            <!-- Delete Button -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Delete"
+                android:onClick="@{()->viewModel.resetAnswer()}" />
+
+            <!-- Enter Button -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Enter"
+                android:onClick="@{()->viewModel.submitAnswer()}" />
+
+        </GridLayout>
+    </LinearLayout>
+</layout>

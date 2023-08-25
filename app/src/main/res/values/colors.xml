@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cardText">#FF000000</color>
+    <!-- Number colors -->
+    <color name="colorDefault">#FFA726</color>
+    <color name="color0">#FFEE58</color>
+    <color name="color1">#EF5350</color>
+    <color name="color2">#AB47BC</color>
+    <color name="color3">#7E57C2</color>
+    <color name="color4">#5C6BC0</color>
+    <color name="color5">#42A5F5</color>
+    <color name="color6">#29B6F6</color>
+    <color name="color7">#26C6DA</color>
+    <color name="color8">#26A69A</color>
+    <color name="color9">#66BB6A</color>
+
+    <!-- Operator colors -->
+    <color name="colorAdd">#D4E157</color>
+    <color name="colorSubtract">#FFEE58</color>
+    <color name="colorMultiply">#FFCA28</color>
+    <color name="colorDivide">#FFA726</color>
+</resources>

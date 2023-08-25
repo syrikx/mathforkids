@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_nav_graph"
+    app:startDestination="@id/QuestionFragment">
+
+    <fragment
+        android:id="@+id/QuestionFragment"
+        android:name="com.example.mathforkids.main.problemsolving.QuestionFragment"
+        android:label="SQuestionFragment Fragment"
+        tools:layout="@layout/fragment_question" />
+</navigation>

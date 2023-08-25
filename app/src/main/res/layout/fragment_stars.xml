@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mathforkids.SharedViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/star10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[9] ? @drawable/filled_star : @drawable/empty_star}" />
+
+        <ImageView
+            android:id="@+id/star9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[8] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[7] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[6] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[5] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[4] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[3] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[2] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[1] ? @drawable/filled_star : @drawable/empty_star}" />
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.starsList[0] ? @drawable/filled_star : @drawable/empty_star}" />
+    </LinearLayout>
+</layout>
+
