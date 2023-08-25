@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ... -->
+
+    <array name="select_one_row_entries">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+    </array>
+
+    <array name="select_one_row_values">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+    </array>
+
+    <array name="select_two_row_entries">
+        <item>9</item>
+        <item>99</item>
+        <item>999</item>
+        <item>9999</item>
+    </array>
+    <array name="select_two_row_values">
+        <item>9</item>
+        <item>99</item>
+        <item>999</item>
+        <item>9999</item>
+    </array>
+
+    <array name="select_three_row_entries">
+        <item>+</item>
+        <item>-</item>
+        <item>x</item>
+        <item>/</item>
+    </array>
+    <array name="select_three_row_values">
+        <item>+</item>
+        <item>-</item>
+        <item>x</item>
+        <item>/</item>
+    </array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+</resources>

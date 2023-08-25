@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- 사용자 설정 -->
+    <PreferenceCategory android:title="사용자 설정">
+
+        <PreferenceScreen
+            android:key="user_settings"
+            android:title="사용자 설정">
+
+            <!-- 사용자 정보 -->
+            <PreferenceCategory android:title="사용자 정보">
+                <EditTextPreference
+                    android:key="user_name"
+                    android:title="사용자 이름 변경"
+                    android:summary="%s"
+                    android:dialogTitle="이름 변경" />
+                <EditTextPreference
+                    android:key="user_birthdate"
+                    android:title="생년월일 변경"
+                    android:summary="%s"
+                    android:dialogTitle="생년월일 변경" />
+                <EditTextPreference
+                    android:key="user_total_score"
+                    android:title="Total Score 변경"
+                    android:summary="%s"
+                    android:dialogTitle="Total Score 변경" />
+            </PreferenceCategory>
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+        <!-- 오른쪽 화면에 선택 가능한 항목들 -->
+
+            <!-- A B C D E F G 중에서 하나 선택 -->
+            <ListPreference
+                android:key="@string/title_select_one_row"
+                android:title="@string/title_select_one_row"
+                android:summary="@string/summary_select_one_row"
+                android:entries="@array/select_one_row_entries"
+                android:entryValues="@array/select_one_row_values"
+                android:dialogTitle="A B C D E F G 중에서 선택" />
+            <!-- 9 99 999 9999 중복 선택 -->
+            <MultiSelectListPreference
+                android:key="@string/title_select_two_rows"
+                android:title="@string/title_select_two_rows"
+                android:summary="%s"
+                android:entries="@array/select_two_row_entries"
+                android:entryValues="@array/select_two_row_values"
+                android:dialogTitle="9 99 999 9999 중복 선택" />
+
+            <!-- + - x / 중복 선택 -->
+            <MultiSelectListPreference
+                android:key="@string/title_select_three_rows"
+                android:title="@string/title_select_three_rows"
+                android:summary="%s"
+                android:entries="@array/select_three_row_entries"
+                android:entryValues="@array/select_three_row_values"
+                android:dialogTitle="+ - x / 중복 선택" />
+
+</PreferenceScreen>
+
+
